@@ -3,12 +3,12 @@ import React, {useState} from 'react';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-import About from './components/About';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+// import About from './components/About';
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
 
 //exact path matches completely
       //path  matches partially
@@ -57,15 +57,16 @@ const toggleMode=()=>{
   return (
     <>
      
-    <Router>
+    {/* <Router> */}
     <Navbar title="txtUtils"  mode={mode} toggleMode={toggleMode}  btnText={btnText} />
    <Alert alert={alert} />
-    <Routes>
+    {/* <Routes>
      
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/" element={<TextForm heading="Enter Text to Analyze" mode={mode} toggleMode={toggleMode} showAlert={showAlert} />} />
-        </Routes>
-    </Router>
+          <Route exact path="/about" element={<About />} /> */}
+          {/* <Route exact path="/" element={} />
+        </Routes> */}
+    {/* </Router> */}
+    <TextForm heading="Enter Text to Analyze" mode={mode} toggleMode={toggleMode} showAlert={showAlert} />
     </>
     
   );
